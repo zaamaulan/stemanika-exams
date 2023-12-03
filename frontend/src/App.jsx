@@ -1,11 +1,14 @@
-import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 
 const App = () => {
-  return (
-    <div>
-      <h1>Stemanika Exams</h1>
-    </div>
-  );
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home />}></Route>
+            </Routes>
+        </BrowserRouter>
+    );
 };
 
 export default App;

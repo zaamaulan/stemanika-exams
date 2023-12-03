@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const express = require("express");
 const mongoose = require("mongoose");
-const soalRouter = require("./routes/soals");
+const examRouter = require("./routes/exams");
 
 const app = express();
 
@@ -14,7 +14,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use("/api/soals", soalRouter);
+app.use("/api/exams", examRouter);
 
 // app.listen(process.env.PORT, () => {
 //     console.log("listening to port 4000!");
